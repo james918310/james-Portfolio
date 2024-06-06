@@ -1,0 +1,125 @@
+@charset "UTF-8";
+.header-nav1 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #e9ebec; /* 添加背景色 */
+}
+.header-nav1 header {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 靠右对齐 */
+}
+.header-nav1 header .logo {
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* 添加光标指示 */
+}
+.header-nav1 header .logo h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.header-nav1 header .logo img {
+  width: 6vw;
+  height: 6vw;
+}
+.header-nav1 header .nav-fornt ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header-nav1 header .nav-fornt ul .anav-fornt {
+  margin-left: auto;
+}
+.header-nav1 header .nav-fornt ul .anav-fornt .lnav-fornt,
+.header-nav1 header .nav-fornt ul .anav-fornt button.lnav-fornt {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  padding: 0.5rem 2rem; /* 添加适当的内边距 */
+  border: none; /* 去除按钮的边框 */
+  background: none; /* 去除按钮的背景 */
+}
+.header-nav1 header .nav-fornt ul .anav-fornt .lnav-fornt:hover,
+.header-nav1 header .nav-fornt ul .anav-fornt button.lnav-fornt:hover {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+}
+.header-nav1 header .nav-fornt ul .anav-fornt .lnav-fornt img.icon-hender,
+.header-nav1 header .nav-fornt ul .anav-fornt button.lnav-fornt img.icon-hender {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 1000px) {
+  .header-nav1 {
+    position: relative; /* 取消冻结效果 */
+  }
+  .header-nav1 header {
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center;
+  }
+  .header-nav1 header .logo {
+    text-align: left; /* 文字向左对齐 */
+  }
+  .header-nav1 header .nav-fornt {
+    margin-top: 1rem; /* 添加适当的上边距 */
+  }
+  .header-nav1 header .nav-fornt ul {
+    flex-direction: column; /* 垂直排列 */
+  }
+  .header-nav1 header .nav-fornt ul .anav-fornt {
+    margin-right: auto;
+    margin-top: 1rem; /* 添加适当的上边距 */
+    text-align: left; /* 文字向左对齐 */
+  }
+}
+div {
+  /* src/styles/TopCoursesComponent.scss */
+}
+div section.background-img {
+  min-height: 60vh;
+  background-image: url("../images/主頁照片1.jpg");
+  margin: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 60rem 60vh;
+  background-position: center;
+  transition: all 0.75s ease;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div h1.background-text1 {
+  margin-top: 2rem;
+  margin-left: 9rem;
+  font-weight: 500;
+}
+div h3.background-text2 {
+  margin: 1rem;
+  margin-left: 9rem;
+  font-weight: 500;
+}
+div .top-courses-container {
+  padding: 5rem;
+  margin-bottom: 3rem;
+}
+div .top-courses {
+  display: flex;
+  overflow-x: scroll; /* 允许水平滚动 */
+  padding: 1rem 0;
+}
+div .top-courses .card {
+  min-width: 18rem;
+  margin-right: 1rem;
+  flex-shrink: 0; /* 防止卡片收缩 */
+}/*# sourceMappingURL=app.css.map */

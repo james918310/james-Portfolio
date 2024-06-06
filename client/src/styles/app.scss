@@ -1,0 +1,148 @@
+// // 主頁的圖片
+.header-nav1 {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #e9ebec; /* 添加背景色 */
+
+  header {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 靠右对齐 */
+    // padding: 1rem 1rem;
+
+    .logo {
+      margin-left: 0.5rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer; /* 添加光标指示 */
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      img {
+        width: 6vw;
+        height: 6vw;
+      }
+    }
+
+    .nav-fornt {
+      ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .anav-fornt {
+          margin-left: auto; // 将链接和按钮推到右侧
+
+          .lnav-fornt,
+          button.lnav-fornt {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            padding: 0.5rem 2rem; /* 添加适当的内边距 */
+            border: none; /* 去除按钮的边框 */
+            background: none; /* 去除按钮的背景 */
+
+            &:hover {
+              color: #007bff;
+              border-bottom: 3px solid #007bff;
+            }
+
+            img.icon-hender {
+              width: 20px;
+              height: 20px;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-nav1 {
+    position: relative; /* 取消冻结效果 */
+    header {
+      flex-direction: column; /* 垂直排列 */
+      justify-content: center;
+
+      .logo {
+        text-align: left; /* 文字向左对齐 */
+      }
+
+      .nav-fornt {
+        margin-top: 1rem; /* 添加适当的上边距 */
+
+        ul {
+          flex-direction: column; /* 垂直排列 */
+          // align-items: center; /* 水平居中对齐 */
+
+          .anav-fornt {
+            margin-right: auto;
+            margin-top: 1rem; /* 添加适当的上边距 */
+            // text-align: center; /* 文字居中对齐 */
+            text-align: left; /* 文字向左对齐 */
+          }
+        }
+      }
+    }
+  }
+}
+
+div {
+  section.background-img {
+    // 设置背景图片
+    min-height: 60vh;
+    background-image: url("../images/主頁照片1.jpg");
+    // background-size: cover;
+    margin: 2rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 60rem 60vh;
+    background-position: center;
+    transition: all 0.75s ease;
+    position: relative;
+    z-index: 0; // stacking context
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1.background-text1 {
+    margin-top: 2rem;
+    margin-left: 9rem;
+    font-weight: 500;
+  }
+  h3.background-text2 {
+    margin: 1rem;
+    margin-left: 9rem;
+    font-weight: 500;
+  }
+  /* src/styles/TopCoursesComponent.scss */
+
+  .top-courses-container {
+    padding: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .top-courses {
+    display: flex;
+    overflow-x: scroll; /* 允许水平滚动 */
+    padding: 1rem 0;
+
+    .card {
+      min-width: 18rem;
+      margin-right: 1rem;
+      flex-shrink: 0; /* 防止卡片收缩 */
+    }
+  }
+}
